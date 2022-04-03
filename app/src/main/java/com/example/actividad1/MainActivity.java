@@ -14,6 +14,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Mostrar la splash screen durante dos segundos
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        setTheme(R.style.Theme_Actividad1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         register = (TextView) findViewById(R.id.register);
